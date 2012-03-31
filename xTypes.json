@@ -40,6 +40,8 @@
   }
 , "valuemaskEnum":
   { "CreateWindow": "CW"
+  , "ChangeWindowAttributes": "CW"
+  , "ConfigureNotify": "ConfigureNotify"
   , "CreateGC":     "GC"
   }
 , "packTypes":
