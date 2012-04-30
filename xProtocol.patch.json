@@ -1,0 +1,95 @@
+{
+  // todo: TEXTITEM16
+  "struct": {
+    "TEXTITEM8": {
+      "field": [
+        {
+          "type": "CARD8",
+          "name": "string_len",
+          "fieldType": "field"
+        },
+        {
+          "type": "CARD8",
+          "name": "delta",
+          "fieldType": "field"
+        },
+        {
+          "type": "char",
+          "name": "string",
+          "fieldType": "list",
+          "fieldref": "string_len"
+        }
+      ]
+    },
+
+  "request": {
+    "PolyText8": {
+      "opcode": "74",
+      "field": [
+        {
+          "bytes": "1",
+          "fieldType": "pad"
+        },
+        {
+          "type": "DRAWABLE",
+          "name": "drawable",
+          "fieldType": "field"
+        },
+        {
+          "type": "GCONTEXT",
+          "name": "gc",
+          "fieldType": "field"
+        },
+        {
+          "type": "INT16",
+          "name": "x",
+          "fieldType": "field"
+        },
+        {
+          "type": "INT16",
+          "name": "y",
+          "fieldType": "field"
+        },
+        {
+          "type": "TEXTITEM8",
+          "name": "items",
+          "fieldType": "list"
+        }
+      ]
+    },
+    "PolyText16": {
+      "opcode": "75",
+      "field": [
+        {
+          "bytes": "1",
+          "fieldType": "pad"
+        },
+        {
+          "type": "DRAWABLE",
+          "name": "drawable",
+          "fieldType": "field"
+        },
+        {
+          "type": "GCONTEXT",
+          "name": "gc",
+          "fieldType": "field"
+        },
+        {
+          "type": "INT16",
+          "name": "x",
+          "fieldType": "field"
+        },
+        {
+          "type": "INT16",
+          "name": "y",
+          "fieldType": "field"
+        },
+        {
+          "type": "BYTE",
+          "name": "items",
+          "fieldType": "list"
+        }
+      ]
+    }
+  }
+}

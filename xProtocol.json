@@ -590,6 +590,26 @@
         }
       ]
     },
+    "TEXTITEM8": {
+      "field": [
+        {
+          "type": "CARD8",
+          "name": "string_len",
+          "fieldType": "field"
+        },
+        {
+          "type": "CARD8",
+          "name": "delta",
+          "fieldType": "field"
+        },
+        {
+          "type": "char",
+          "name": "string",
+          "fieldType": "list",
+          "fieldref": "string_len"
+        }
+      ]
+    },
     "SEGMENT": {
       "field": [
         {
@@ -6689,7 +6709,7 @@
           "fieldType": "field"
         },
         {
-          "type": "BYTE",
+          "type": "TEXTITEM8",
           "name": "items",
           "fieldType": "list"
         }
