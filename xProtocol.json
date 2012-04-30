@@ -590,26 +590,6 @@
         }
       ]
     },
-    "TEXTITEM8": {
-      "field": [
-        {
-          "type": "CARD8",
-          "name": "string_len",
-          "fieldType": "field"
-        },
-        {
-          "type": "CARD8",
-          "name": "delta",
-          "fieldType": "field"
-        },
-        {
-          "type": "char",
-          "name": "string",
-          "fieldType": "list",
-          "fieldref": "string_len"
-        }
-      ]
-    },
     "SEGMENT": {
       "field": [
         {
@@ -713,6 +693,26 @@
           "name": "address",
           "fieldType": "list",
           "fieldref": "address_len"
+        }
+      ]
+    },
+    "TEXTITEM8": {
+      "field": [
+        {
+          "type": "CARD8",
+          "name": "string_len",
+          "fieldType": "field"
+        },
+        {
+          "type": "CARD8",
+          "name": "delta",
+          "fieldType": "field"
+        },
+        {
+          "type": "char",
+          "name": "string",
+          "fieldType": "list",
+          "fieldref": "string_len"
         }
       ]
     }

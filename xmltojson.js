@@ -1,6 +1,8 @@
 var xml = require('node-xml')
-  , writeFile = require('fs').writeFileSync
+  , fs = require('fs')
+  , writeFile = fs.writeFileSync
   , write = function(file, obj) { writeFile(file, JSON.stringify(obj, null, 2)) }
+  , xProtoPatch = JSON.parse(fs.readFileSync('xProtocol.patch.json'))
   , ret = {}
   , parser = new xml.SaxParser(parse)
   , state = []
@@ -34,6 +36,11 @@ function parse(cb) {
 
   cb.onEndDocument(function() {
     ret = ret.xcb
+    for (var level in xProtoPatch) {
+      for (var prop in xProtoPatch[level] ) {
+        ret[level][prop] = xProtoPatch[level][prop];
+      }
+    }
     write('xProtocol.json', ret)
   })
 }
